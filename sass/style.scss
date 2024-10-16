@@ -11,14 +11,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-31w
 */
 
-@import "variables/couleurs";
+// @import "variables/couleurs";
+/*************************************************
+Normalize
+**************************************************/
 @import "normalize/normalize";
-
+/*************************************************
+Layout
+**************************************************/
+@import "layout/page";
 /*--------------------------------------------- base  */
+/*************************************************
+Composant
+**************************************************/
+@import "composants/bloc";
 @import "base/heading";
-@import "base/espacement";
-@import "base/lien";
-@import "base/list";
-
-/* --------------------------------------------- composant */
-@import "composant/entete";
+// @import "base/espacement";
+// @import "base/lien";
+// @import "base/list";
