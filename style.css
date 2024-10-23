@@ -187,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -197,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -208,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -254,8 +254,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -263,8 +263,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -272,7 +272,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -280,7 +280,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -329,13 +329,15 @@ template {
 Layout
 **************************************************/
 .global {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
 }
 
 .entete {
-  background-color: aqua;
+  background-color: #00dfdf;
 }
 
 .principal {
@@ -343,7 +345,7 @@ Layout
 }
 
 .pied {
-  background-color: rgb(53, 15, 5);
+  background-color: rgb(102, 172, 36);
 }
 
 /*--------------------------------------------- base  */
@@ -362,6 +364,50 @@ Composant
   border: 1px solid #aaa;
   flex: 1 1 340px;
   padding: 10px;
+}
+
+/*
+<nav class="menu-principal-container">
+<ul id="menu-principal" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost:81/31w-etudiant/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost:81/31w-etudiant/582-4pa-interfaces-web-reactives-et-animees-cours-au-choix-75h/">Interfaces Web réactives et animées</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost:81/31w-etudiant/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-59"><a href="http://localhost:81/31w-etudiant/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-60"><a href="http://localhost:81/31w-etudiant/582-4c2-gestion-de-projets-multimedias/" aria-current="page">Gestion de projets multimédias</a></li>
+</ul></nav>
+*/
+.menu-principal-container .menu {
+  display: flex;
+  list-style-type: none;
+  gap: 5px;
+}
+.menu-principal-container .menu .menu-item a {
+  display: block;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-principal-container .menu .menu-item a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+.menu-principal-container 
+.menu-principal-container .menu
+.menu-principal-container .menu .menu-item
+.menu-principal-container .menu .menu-item a
+*/
+.entete__global {
+  align-items: center;
+}
+
+.entete__titre h1,
+.entete__titre h2 {
+  margin: 0;
+}
+
+.entete__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 h1 {
@@ -408,5 +454,6 @@ h6 {
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}/*# sourceMappingURL=style.css.map */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+} /*# sourceMappingURL=style.css.map */
