@@ -1,12 +1,30 @@
+:root {
+  --couleur1: #e8c411;
+  --couleur2: #11b6e8;
+  --couleur3: #0e2add;
+}
+
+html,
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
 .global {
   max-width: 1100px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
 }
-
+/*
 .entete {
   background-color: #00dfdf;
+  
 }
+*/
+
+@include regle_couleur_back(".entete", $couleur1);
 
 .principal {
   background-color: rgb(211, 230, 42);
